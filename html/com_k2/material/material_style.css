@@ -1,0 +1,51 @@
+/**
+ * @package		template gentracinterna
+ * @author		javiercito53
+ * @license		GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
+ */
+
+
+div.itemListCategory, div.subCategory {
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;
+}
+
+.catItemView .jumbotron{
+    padding-left:30px !important;
+    padding-right:30px !important;
+    margin-bottom:0px;
+    height:200px;
+}
+
+.catItemView .jumbotron .catItemTitle {
+    max-height:90%;
+    overflow:hidden;
+}
+
+.catItemView .jumbotron a {
+    color:#fff;
+}
+
+
+div.catItemExtraFields, div.genericItemExtraFields {
+    margin-top:0px;
+    padding-top:0px;
+}
+
+.catItemBody .catItemExtraFields {
+    margin-left:25px;
+    overflow:hidden;
+}
+
+.catItemView {
+    background:#E5E0D0;
+    border-radius:5px;
+}
+
+.catItemView:hover {
+    /*background:#C5E589;*/
+    background:#C9C5B9;
+}
+

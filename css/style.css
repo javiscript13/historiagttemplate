@@ -1,0 +1,275 @@
+@media (min-width: 1200px) { /*lg */
+    nav.navbar {
+        position:absolute;
+        right:0;
+        bottom:0;
+    }
+    .page-header .row {
+        position:relative;
+    }
+}
+@media (min-width: 768px) { /*sm */
+    .nav li {
+        border-bottom: 5px solid #2F2F2F;
+    }
+    .nav li.active, .nav li:hover {
+        /*border-bottom: 5px solid #2CB800;*/
+        border-bottom: 5px solid #C2A44A;
+        background:none;
+        padding-bottom:0;
+    }
+}
+
+@media (max-width: 767px) { /*xs*/
+    .nav li {
+        border-left: 5px solid #2F2F2F;
+    }
+    .nav li.active, .nav li:hover {
+        /*border-left: 5px solid #2CB800;*/
+        border-left: 5px solid #C2A44A;
+        background:none;
+        padding-bottom:0;
+    }
+}
+
+.page-header{
+	margin:0 auto;
+	border:none;
+}
+
+.navbar-form{
+	border:none;
+	box-shadow:none;
+	margin:0;
+	margin-bottom:8px;
+}
+
+.navbar .row{
+	padding:0 15px 0 15px;
+}
+
+#search-button {
+	margin:0;
+	padding: 3px 8px;
+	background: #fff;
+	top:0px;
+}
+
+#search-group .row{
+	background:#F7F7F7;
+	border-radius:4px;
+}
+
+#mod-search-searchword{
+	border:none;
+	margin-top:2px;
+}
+
+.jj_sl_navigation{
+	top:100px;
+}
+
+.navbar-header{
+	padding:0;
+}
+
+.navbar{
+	margin:0;
+}
+
+.navbar a, .navbar a:visited, .navbar a:hover, .navbar a:active {
+    color:#fff;
+}
+.navbar-inverse {
+	background-color:#000;
+}
+
+.navbar-inverse .icon-bar {
+	background-color:#FFF0AE;
+}
+
+.k2ItemsBlock .jumbotron, .userItemList .jumbotron{
+	background-repeat:no-repeat;
+	background-size:cover;
+	color:#fff;
+}
+
+.k2ItemsBlock .jumbotron a, .userItemList .jumbotron a{
+    color:#fff;
+	margin-bottom:0;
+	font-family:'Oswald';
+	font-size:32px;
+}
+
+.k2ItemsBlock .jumbotron .moduleItemAuthor a {
+    font-family:'Roboto';
+    font-size:18px;
+}
+
+.pageBottom div .k2ItemsBlock ul li {
+    margin-bottom:0px;
+}
+
+.itemAttachmentsBlock {
+    background:#C5E589;
+}
+
+.article-promo {
+	background:yellow;
+	margin-bottom:20px;
+}
+
+div.catItemIsFeatured::before, div.userItemIsFeatured::before, div.itemIsFeatured::before {
+    content: "";
+}
+
+
+.well {
+	background-color:inherit;
+	border:none;
+	box-shadow:none;
+	margin-bottom:0px;
+}
+
+body {
+	background:#F3F1ED;
+	color: #545252;
+	font-family:'Roboto';
+}
+
+h1,h2,h3 {
+	font-family:'Oswald';
+	color:#1A012B;
+}
+
+h1{font-size:36px}
+h2{font-size:32px}
+h3{font-size:24px}
+
+.pageHead {
+	background:#2F2F2F;
+}
+
+.page-header{
+    padding-bottom:0;
+}
+
+#siteLogo img {
+    margin: 5px;
+	width:100%;
+}
+
+.pageMain {
+	margin-top:25px;
+	margin-bottom:25px;
+}
+
+
+.pageBottom {
+	background-color:#C9C5B9;
+	margin-bottom:15px;
+}
+
+.pageBottom div {
+    padding-left:15px;
+}
+
+.pageFooter {
+	text-align:center;
+}
+
+li {
+	display:block;
+}
+
+li:before {
+    content: "\e142";
+    font-family: 'Glyphicons Halflings';
+    font-size: 12px;
+    float: left;
+    margin-top: 4px;
+    margin-left: -17px;
+    color: #333333;
+}
+
+.k2Pagination ul li:before {
+    content:"";
+}
+
+
+.navbar-nav li:before {
+	content: ""
+}
+
+
+.nav li a:hover{
+    background:none;
+}
+
+
+
+::selection, ::-moz-selection {
+    color: white;
+    background: yellow;
+}
+
+.navbar-nav{
+	font-family:'PT Sans Narrow';
+	font-size:18px;
+}
+
+a, a:visited, a:hover, a:active {
+	color:#0D42A4;
+	text-decoration:none;
+}
+
+a:hover {
+	color:#062E72;
+}
+
+.artIntro {
+      padding:10px;
+      margin: 5px 0 20px 0;
+      text-align:justify;
+      font-family:Helvetica;
+      color:#9B9896;
+      background:#01102A;
+      -webkit-border-radius: 5px ;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      margin: 10px 0;
+}
+
+#searchForm .only {
+	display:none;
+}
+
+.form-horizontal .control-label {
+	text-align:left;
+}
+
+.weblinks,
+.category-module,
+.syndicate-module,
+ul.nav.menu,
+#login-form {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;
+	background:#eee;
+	border:1px solid #ccc;
+	padding:5px;
+	margin:0px 0px 10px 0px;
+}
+
+.weblinks,
+.category-module {
+	padding:0px 0px 0px 20px;
+}
+
+.syndicate-module {
+	display:block;
+}
+
+
