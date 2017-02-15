@@ -1,6 +1,7 @@
 <?php
 
 defined('_JEXEC') or die;
+$this->setMetaData('generator','');
 
 $app             = JFactory::getApplication();
 $doc             = JFactory::getDocument();
