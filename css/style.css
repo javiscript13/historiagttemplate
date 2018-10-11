@@ -111,7 +111,15 @@
 }
 
 .itemAttachmentsBlock {
-    background:#C5E589;
+    background: #46A546;
+    color:white;
+    font-size:1.3em;
+    padding: 10px 4px !important;
+    border-radius:5px;
+}
+
+div.itemAttachmentsBlock span{
+    color:white !important;
 }
 
 .article-promo {
@@ -272,4 +280,8 @@ ul.nav.menu,
 	display:block;
 }
 
-
+#issn {
+    color:#fff !important;
+    text-align:center;
+    margin-left:20px;
+}

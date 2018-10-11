@@ -30,6 +30,31 @@ defined('_JEXEC') or die;
 	<!-- K2 Plugins: K2BeforeDisplay -->
 	<?php echo $this->item->event->K2BeforeDisplay; ?>
 
+	<?php if($this->item->params->get('itemExtraFields') && count($this->item->extra_fields)): ?>
+	<!-- Item extra fields -->
+	<div class="itemExtraFields">
+		<!--h3><?php echo JText::_('K2_ADDITIONAL_INFO'); ?></h3-->
+		<h3>Referencias</h3>
+		<ul>
+			<?php foreach ($this->item->extra_fields as $key=>$extraField): ?>
+			<?php if($extraField->value != ''): ?>
+			<li class="<?php echo ($key%2) ? "odd" : "even"; ?> type<?php echo ucfirst($extraField->type); ?> group<?php echo $extraField->group; ?>">
+				<?php if($extraField->type == 'header'): ?>
+				<h4 class="itemExtraFieldsHeader"><?php echo $extraField->name; ?></h4>
+				<?php else: ?>
+				<span class="itemExtraFieldsLabel"><?php echo $extraField->name; ?>:</span>
+				<span class="itemExtraFieldsValue"><?php echo $extraField->value; ?></span>
+				<?php endif; ?>
+			</li>
+			<?php endif; ?>
+			<?php endforeach; ?>
+		</ul>
+		<div class="clr"></div>
+	</div>
+	<?php endif; ?>
+
+
+
 	<div class="itemHeader">
 
 	<?php if($this->item->params->get('itemDateCreated')): ?>
@@ -75,6 +100,24 @@ defined('_JEXEC') or die;
 	<?php endif; ?>
 
 	</div>
+
+	<?php if($this->item->params->get('itemAttachments') && count($this->item->attachments)): ?>
+	<!-- Item attachments -->
+	<div class="itemAttachmentsBlock">
+		<span><?php echo JText::_('K2_DOWNLOAD_ATTACHMENTS'); ?></span>
+		<ul class="itemAttachments">
+			<?php foreach ($this->item->attachments as $attachment): ?>
+			<li>
+				<a title="<?php echo K2HelperUtilities::cleanHtml($attachment->titleAttribute); ?>" href="<?php echo $attachment->link; ?>"><?php echo $attachment->title; ?></a>
+				<?php if($this->item->params->get('itemAttachmentsCounter')): ?>
+				<span>(<?php echo $attachment->hits; ?> <?php echo ($attachment->hits==1) ? JText::_('K2_DOWNLOAD') : JText::_('K2_DOWNLOADS'); ?>)</span>
+				<?php endif; ?>
+			</li>
+			<?php endforeach; ?>
+		</ul>
+	</div>
+	<?php endif; ?>
+
 
 	<!-- Plugins: AfterDisplayTitle -->
 	<?php echo $this->item->event->AfterDisplayTitle; ?>
@@ -245,28 +288,6 @@ defined('_JEXEC') or die;
 
 		<div class="clr"></div>
 
-		<?php if($this->item->params->get('itemExtraFields') && count($this->item->extra_fields)): ?>
-		<!-- Item extra fields -->
-		<div class="itemExtraFields">
-			<h3><?php echo JText::_('K2_ADDITIONAL_INFO'); ?></h3>
-			<ul>
-				<?php foreach ($this->item->extra_fields as $key=>$extraField): ?>
-				<?php if($extraField->value != ''): ?>
-				<li class="<?php echo ($key%2) ? "odd" : "even"; ?> type<?php echo ucfirst($extraField->type); ?> group<?php echo $extraField->group; ?>">
-					<?php if($extraField->type == 'header'): ?>
-					<h4 class="itemExtraFieldsHeader"><?php echo $extraField->name; ?></h4>
-					<?php else: ?>
-					<span class="itemExtraFieldsLabel"><?php echo $extraField->name; ?>:</span>
-					<span class="itemExtraFieldsValue"><?php echo $extraField->value; ?></span>
-					<?php endif; ?>
-				</li>
-				<?php endif; ?>
-				<?php endforeach; ?>
-			</ul>
-			<div class="clr"></div>
-		</div>
-		<?php endif; ?>
-
 		<?php if($this->item->params->get('itemHits') || ($this->item->params->get('itemDateModified') && intval($this->item->modified)!=0)): ?>
 		<div class="itemContentFooter">
 
@@ -310,23 +331,6 @@ defined('_JEXEC') or die;
 		$this->item->params->get('itemAttachments')
 	): ?>
 	<div class="itemLinks">
-
-		<?php if($this->item->params->get('itemAttachments') && count($this->item->attachments)): ?>
-		<!-- Item attachments -->
-		<div class="itemAttachmentsBlock">
-			<span><?php echo JText::_('K2_DOWNLOAD_ATTACHMENTS'); ?></span>
-			<ul class="itemAttachments">
-				<?php foreach ($this->item->attachments as $attachment): ?>
-				<li>
-					<a title="<?php echo K2HelperUtilities::cleanHtml($attachment->titleAttribute); ?>" href="<?php echo $attachment->link; ?>"><?php echo $attachment->title; ?></a>
-					<?php if($this->item->params->get('itemAttachmentsCounter')): ?>
-					<span>(<?php echo $attachment->hits; ?> <?php echo ($attachment->hits==1) ? JText::_('K2_DOWNLOAD') : JText::_('K2_DOWNLOADS'); ?>)</span>
-					<?php endif; ?>
-				</li>
-				<?php endforeach; ?>
-			</ul>
-		</div>
-		<?php endif; ?>
 		
 		<?php if($this->item->params->get('itemCategory')): ?>
 		<!-- Item category -->
